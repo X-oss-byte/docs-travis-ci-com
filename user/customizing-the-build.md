@@ -89,17 +89,19 @@ You can set the [clone depth](https://git-scm.com/docs/git-clone#git-clone---dep
 
 ```yaml
 git:
-  depth: 3
+  depth: 6
 ```
 {: data-file=".travis.yml"}
 
 You can also remove the `--depth` flag entirely with:
+
 
 ```yaml
 git:
   depth: false
 ```
 {: data-file=".travis.yml"}
+chose most suitable travis.yml file for build (interswitch) according to features requirements 
 
 > Some operations on the repository, such as common automated code review scripts (e.g. Pronto for Ruby), may fail due to the limited git clone depth, not being able to access all the objects in the repository. Removing the depth flag, or running `git fetch --unshallow` might solve the issue.
 
